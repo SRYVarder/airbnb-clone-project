@@ -138,3 +138,18 @@ Ensures all incoming data is validated and sanitized to prevent common attacks s
 - **Protecting User Data:** Safeguards personal information, login credentials, and sensitive booking details.
 - **Securing Payments:** Prevents fraud and unauthorized transactions by using encrypted and verified payment gateways.
 - **Ensuring Platform Integrity:** Protects the application from malicious activities and ensures user trust.
+
+## CI/CD Pipeline
+
+### What is CI/CD?
+CI/CD (Continuous Integration and Continuous Deployment) is a set of practices that automate the process of integrating code changes, testing, and deploying applications. CI ensures that code is continuously built and tested, while CD automates the deployment process to staging or production environments.
+
+### Importance for the Project
+- **Faster Development:** Automates testing and deployment to reduce manual work.
+- **Improved Code Quality:** Runs automated tests for every commit to catch bugs early.
+- **Reliable Releases:** Ensures consistent builds across all environments, minimizing errors during deployment.
+
+### Tools
+- **GitHub Actions:** Automates workflows such as running tests and deploying applications directly from the GitHub repository.
+- **Docker:** Creates containerized environments for consistent builds and deployments.
+- **Jenkins (Optional):** A flexible CI/CD server that can be used for more complex workflows.
