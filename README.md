@@ -116,3 +116,25 @@ Allows users to find properties quickly using filters such as location, price ra
 
 ### Admin Dashboard
 Gives administrators control over users, properties, and bookings. Includes analytics and monitoring tools to ensure smooth platform operations.
+
+## API Security
+
+### Authentication
+Implements secure login and session management using JWT (JSON Web Tokens) or OAuth2. This ensures that only verified users can access protected endpoints.
+
+### Authorization
+Uses role-based access control (RBAC) to determine what resources a user can access based on their role (guest, host, admin). Prevents unauthorized actions such as editing another user’s property.
+
+### Data Encryption
+Encrypts sensitive data (passwords, payment details) both in transit (using HTTPS/TLS) and at rest. Protects user information from being intercepted or leaked.
+
+### Rate Limiting & Throttling
+Restricts the number of API requests per user/IP to prevent abuse and denial-of-service (DoS) attacks. Helps maintain performance and availability of the system.
+
+### Input Validation & Sanitization
+Ensures all incoming data is validated and sanitized to prevent common attacks such as SQL Injection and Cross-Site Scripting (XSS).
+
+### Importance of Security
+- **Protecting User Data:** Safeguards personal information, login credentials, and sensitive booking details.
+- **Securing Payments:** Prevents fraud and unauthorized transactions by using encrypted and verified payment gateways.
+- **Ensuring Platform Integrity:** Protects the application from malicious activities and ensures user trust.
