@@ -93,3 +93,26 @@ A web server and reverse proxy used to handle client requests, serve static file
   - `status` (Enum: pending, completed, failed)
   - `payment_date` (DateTime)
 - **Relationship:** A payment is associated with a single booking.
+
+## Feature Breakdown
+
+### User Management
+Enables users to register, log in, and manage their profiles. Role-based access (guest, host, admin) ensures that users have appropriate permissions for their activities on the platform.
+
+### Property Management
+Allows hosts to list, update, and remove properties. Each property includes details such as title, description, price, images, and location to attract potential guests.
+
+### Booking System
+Enables guests to search for properties, check availability, and make reservations. It ensures date validation, pricing calculations, and prevents double bookings.
+
+### Review System
+Provides a platform for guests to leave ratings and comments about their stays. Reviews help build trust and guide other users in making informed decisions.
+
+### Payment Integration
+Handles secure transactions for property bookings. Supports multiple payment statuses (pending, completed, failed) and maintains transaction history.
+
+### Search & Filtering
+Allows users to find properties quickly using filters such as location, price range, and availability dates. Improves the user experience by reducing search time.
+
+### Admin Dashboard
+Gives administrators control over users, properties, and bookings. Includes analytics and monitoring tools to ensure smooth platform operations.
