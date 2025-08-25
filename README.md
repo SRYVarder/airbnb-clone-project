@@ -44,3 +44,52 @@ An in-memory data store used for caching and managing sessions to improve applic
 
 ### Nginx
 A web server and reverse proxy used to handle client requests, serve static files, and balance traffic across application instances.
+
+## Database Design
+
+### Key Entities and Fields
+
+#### 1. Users
+- **Fields:** 
+  - `id` (Primary Key)
+  - `name` (String)
+  - `email` (Unique String)
+  - `password_hash` (String)
+  - `role` (Enum: admin, host, guest)
+- **Relationship:** A user can own multiple properties and make multiple bookings.
+
+#### 2. Properties
+- **Fields:** 
+  - `id` (Primary Key)
+  - `user_id` (Foreign Key to Users)
+  - `title` (String)
+  - `description` (Text)
+  - `location` (String)
+- **Relationship:** A property belongs to a user (host) and can have multiple bookings and reviews.
+
+#### 3. Bookings
+- **Fields:** 
+  - `id` (Primary Key)
+  - `user_id` (Foreign Key to Users)
+  - `property_id` (Foreign Key to Properties)
+  - `check_in_date` (Date)
+  - `check_out_date` (Date)
+- **Relationship:** A booking belongs to both a user and a property.
+
+#### 4. Reviews
+- **Fields:** 
+  - `id` (Primary Key)
+  - `user_id` (Foreign Key to Users)
+  - `property_id` (Foreign Key to Properties)
+  - `rating` (Integer)
+  - `comment` (Text)
+- **Relationship:** A review is created by a user for a specific property.
+
+#### 5. Payments
+- **Fields:** 
+  - `id` (Primary Key)
+  - `booking_id` (Foreign Key to Bookings)
+  - `amount` (Decimal)
+  - `status` (Enum: pending, completed, failed)
+  - `payment_date` (DateTime)
+- **Relationship:** A payment is associated with a single booking.
