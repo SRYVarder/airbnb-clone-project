@@ -24,3 +24,23 @@ Tests the application to identify bugs, performance issues, and usability proble
 
 ### DevOps Engineer
 Handles deployment, CI/CD pipelines, and infrastructure management. Ensures smooth integration between development and operations teams.
+
+## Technology Stack
+
+### Django
+A high-level Python web framework used to build the backend of the application. It provides tools for creating RESTful APIs, handling authentication, and managing server-side logic.
+
+### PostgreSQL
+A powerful, open-source relational database system used to store and manage application data with high reliability and performance.
+
+### GraphQL
+An API query language that allows clients to request specific data, reducing over-fetching and improving performance compared to traditional REST APIs.
+
+### Docker
+A containerization tool that packages the application and its dependencies, ensuring consistency across different environments (development, staging, and production).
+
+### Redis
+An in-memory data store used for caching and managing sessions to improve application performance.
+
+### Nginx
+A web server and reverse proxy used to handle client requests, serve static files, and balance traffic across application instances.
